@@ -71,9 +71,11 @@ class Student
   end
 end 
 
-  def self.first_x_student_in_grade_10(x)
+  def self.first_x_student_in_grade_10(grade)
     sql = <<-SQL
-    SELECT * FROM students WHERE
-  end 
-
+    SELECT * 
+    FROM student 
+    WHERE student.grade = ?
+    SQL 
+    DB[:conn].execute(sql).collect do |r
 end
