@@ -77,5 +77,8 @@ end
     FROM student 
     WHERE student.grade = ?
     SQL 
-    DB[:conn].execute(sql).collect do |r
+    DB[:conn].execute(sql).collect do |r|
+    self.new_from_db(r)
+  end 
+  end 
 end
