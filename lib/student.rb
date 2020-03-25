@@ -72,13 +72,6 @@ class Student
 end 
 
   def self.first_x_student_in_grade_10(grade)
-    sql = <<-SQL
-    SELECT * 
-    FROM student 
-    WHERE student.grade = ?
-    SQL 
-    DB[:conn].execute(sql).collect do |r|
-    self.new_from_db(r)
-  end 
+    
   end 
 end
