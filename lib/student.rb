@@ -93,6 +93,6 @@ end
   end
   
   def self.all_students_in_grade_X(x)
-    
+     sql = "SELECT * FROM students WHERE grade = ?"
   end 
 end
